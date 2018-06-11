@@ -7,9 +7,9 @@
 //
 
 #import "FourVC.h"
-
-@interface FourVC ()
-
+#import <WebKit/WebKit.h>
+@interface FourVC ()<WKUIDelegate,WKNavigationDelegate>
+@property(strong,nonatomic)WKWebView * WKWeb;
 @end
 
 @implementation FourVC
@@ -17,21 +17,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor greenColor];
+    NSLog(@"%@",_UrlStr);
+    [self.view addSubview:self.WKWeb];
+    self.WKWeb.UIDelegate = self;
+    self.WKWeb.navigationDelegate = self;
+    [self.WKWeb loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_UrlStr]]];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (WKWebView *)WKWeb   {
+    if (!_WKWeb) {
+        _WKWeb = [[WKWebView alloc] initWithFrame:self.view.bounds];
+    }
+    return _WKWeb;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - WKNavigationDelegate
+// 页面开始加载时调用
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation{
+    self.title = @"加载中。。。";
 }
-*/
-
+// 当内容开始返回时调用
+- (void)webView:(WKWebView *)webView didCommitNavigation:(WKNavigation *)navigation{
+    self.title = @"正在读取。。。";
+}
+// 页面加载完成之后调用
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
+    self.title = @"加载完成";
+}
+// 页面加载失败时调用
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation{
+    self.title = @"加载失败";
+}
 @end

@@ -1,18 +1,25 @@
 //
-//  TabView.h
+//  TabModel.h
 //  YBJPersonal
 //
-//  Created by mac on 2018/6/5.
+//  Created by mac on 2018/6/10.
 //  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "TabModel.h"
+//风格Style
+typedef NS_ENUM(NSInteger, YBJTabBarItemStyle) {
+    YBJTabBarItemStyleNome = 0,
+    YBJTabBarItemStyleFirst,         //第一种风格：三个按钮
+    YBJTabBarItemStyleSecond,        //第二种风格：四个按钮
+    YBJTabBarItemStyleThree,         //第三种风格：五个按钮
+    YBJTabBarItemStyleFour,          //第四种风格：五个按钮中间凸起
+    YBJTabBarItemStyleFive,          //第五种风格：四个按钮高亮状态变大
+};
 
-@interface TabView : UIView
-//保存按钮数组
-@property(strong ,nonatomic)NSMutableArray * btnArr;
+@interface TabModel : NSObject
+
 //Style
 @property(assign ,nonatomic)YBJTabBarItemStyle Style;
 //VCNum
@@ -29,8 +36,6 @@
 @property(strong ,nonatomic)UIColor * btnTitleColor;
 //选中时文字的背景颜色
 @property(strong ,nonatomic)UIColor * btnTitleHetColor;
-//tabBtnblock 的回调方法 点击返回tabbar第几个
-@property(nonatomic, copy)void(^tabBtnBlock)(NSInteger index);
 
-@property(strong ,nonatomic)TabModel * tabModel;
++ (TabModel *)shareTabModel;
 @end

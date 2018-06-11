@@ -7,7 +7,7 @@
 //
 
 #import "SecondVC.h"
-
+#import "FourVC.h"
 @interface SecondVC ()
 
 @end
@@ -17,21 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:UIScreen_Rect];
+    imageView.image = [UIImage imageNamed:@"2"];
+    [self.view addSubview:imageView];
+    self.title = @"简书";
+    [self setRightBtn:[UIImage resizeImage:[UIImage imageNamed:@"简书"] withNewSize:CGSizeMake(30, 30)]];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)RightBtnAcrion{
+    FourVC * VC = [[FourVC alloc]init];
+    VC.UrlStr = @"https://www.jianshu.com/u/aff4c4fbd8db";
+    [self.navigationController pushViewController:VC animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "HomeVC.h"
-
+#import "FourVC.h"
 @interface HomeVC ()
 
 @end
@@ -16,22 +16,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationController.navigationBar.barTintColor=[UIColor whiteColor];
+    
+    [self YBJ_setNavLeftBtn:[UIImage resizeImage:[UIImage imageNamed:@"返回"] withNewSize:CGSizeMake(30, 30)]];
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    if (self.navigationController.viewControllers.count > 1) {
+        self.hidesBottomBarWhenPushed=YES;
+        self.tabBarController.tabBar.hidden=YES;
+    }else{
+        self.hidesBottomBarWhenPushed=NO;
+        self.tabBarController.tabBar.hidden=NO;
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//二级界面以后的方法
+- (void)YBJ_setNavLeftBtn:(UIImage *)image{
+    if (self.navigationController.viewControllers.count > 1) {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//返回
+- (void)back {
+    [self.navigationController popViewControllerAnimated:YES];
 }
-*/
+//左边按钮
+-(void)setLeftBtn:(UIImage *)image{
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleDone target:self action:@selector(LeftBtnAcrion)];
+}
+-(void)LeftBtnAcrion{}
+//右边按钮
+-(void)setRightBtn:(UIImage *)image{
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleDone target:self action:@selector(RightBtnAcrion)];
+}
+-(void)RightBtnAcrion{}
 
 @end

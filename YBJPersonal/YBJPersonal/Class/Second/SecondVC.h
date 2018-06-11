@@ -6,8 +6,8 @@
 //  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HomeVC.h"
 
-@interface SecondVC : UIViewController
+@interface SecondVC : HomeVC
 
 @end

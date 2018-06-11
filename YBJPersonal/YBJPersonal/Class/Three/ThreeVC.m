@@ -7,7 +7,7 @@
 //
 
 #import "ThreeVC.h"
-
+#import "FourVC.h"
 @interface ThreeVC ()
 
 @end
@@ -17,6 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:UIScreen_Rect];
+    imageView.image = [UIImage imageNamed:@"3"];
+    [self.view addSubview:imageView];
+    self.title = @"csdn";
+    [self setLeftBtn:[UIImage resizeImage:[UIImage imageNamed:@"csdn"] withNewSize:CGSizeMake(30, 30)]];
+}
+-(void)LeftBtnAcrion{
+    FourVC * VC = [[FourVC alloc]init];
+    VC.UrlStr = @"https://blog.csdn.net/RogueYBJ";
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

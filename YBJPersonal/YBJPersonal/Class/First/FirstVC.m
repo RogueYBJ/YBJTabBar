@@ -7,7 +7,7 @@
 //
 
 #import "FirstVC.h"
-
+#import "FourVC.h"
 @interface FirstVC ()
 
 @end
@@ -17,8 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:UIScreen_Rect];
+    imageView.image = [UIImage imageNamed:@"1"];
+    [self.view addSubview:imageView];
+    self.title = @"github";
+    [self setLeftBtn:[UIImage resizeImage:[UIImage imageNamed:@"github"] withNewSize:CGSizeMake(30, 30)]];
+    
 }
-
+-(void)LeftBtnAcrion{
+    FourVC * VC = [[FourVC alloc]init];
+    VC.UrlStr = @"https://github.com/RogueYBJ";
+    [self.navigationController pushViewController:VC animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

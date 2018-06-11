@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TabModel.h"
 typedef NS_ENUM(NSInteger, RootTabBarItem) {
     RootTabBarItemHome = 0,     //首页
     RootTabBarItemFirst,        //第一个
@@ -17,5 +17,7 @@ typedef NS_ENUM(NSInteger, RootTabBarItem) {
 };
 
 @interface RootTabbar : UITabBarController
+
+@property(strong ,nonatomic)TabModel * tabModel;
 
 @end

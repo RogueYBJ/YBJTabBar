@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeVC : UIViewController
-
+//左边按钮
+-(void)setLeftBtn:(UIImage *)image;
+-(void)LeftBtnAcrion;
+//右边按钮
+-(void)setRightBtn:(UIImage *)image;
+-(void)RightBtnAcrion;
 @end

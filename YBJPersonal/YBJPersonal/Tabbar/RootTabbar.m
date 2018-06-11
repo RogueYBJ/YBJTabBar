@@ -8,12 +8,9 @@
 
 #import "RootTabbar.h"
 #import "Tabbar.h"
-#import "HomeVC.h"
-#import "FirstVC.h"
-#import "SecondVC.h"
-#import "ThreeVC.h"
-#import "FourVC.h"
 @interface RootTabbar ()
+
+@property(weak ,nonatomic)Tabbar * tabbar;
 
 @end
 
@@ -22,17 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Tabbar * tabbar = [[Tabbar alloc]init:YBJTabBarItemStyleFirst];
-    //修改title的颜色
-    tabbar.btnTitleColor = [UIColor blackColor];
-    //修改title按住是颜色
-    tabbar.btnTitleHetColor = [UIColor orangeColor];
-    //传入icon图片数组
-    tabbar.IconArr = @[[UIImage imageNamed:@"第一"],[UIImage imageNamed:@"第二"],[UIImage imageNamed:@"第三"]];
-    //传入icon选中时图片数组
-    tabbar.IconHetArr = @[[UIImage imageNamed:@"第一个"],[UIImage imageNamed:@"第二个"],[UIImage imageNamed:@"第三个"]];
-    //传入title数组
-    tabbar.btnTitleArr = @[@"首页",@"咨询",@"我的"];
+    Tabbar * tabbar = [[Tabbar alloc]init];
     //点击tabBtn的方法回调
     tabbar.tabView.tabBtnBlock = ^(NSInteger index) {
         NSLog(@"index:%ld",index);
@@ -40,17 +27,13 @@
     };
     [self setValue:tabbar forKey:@"tabBar"];
     
-    [self addChildViewController:[[FirstVC alloc]init]];
-    [self addChildViewController:[[SecondVC alloc]init]];
-    [self addChildViewController:[[ThreeVC alloc]init]];
-    
+    _tabbar = tabbar;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
+-(void)setTabModel:(TabModel *)tabModel{
+    self.selectedIndex = tabModel.inderx;
+    tabModel.VCNum = self.viewControllers.count;
+    _tabbar.tabModel = tabModel;
 }
-
 
 
 @end

@@ -6,8 +6,10 @@
 //  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "HomeVC.h"
 
-@interface FourVC : UIViewController
+@interface FourVC : HomeVC
+
+@property(copy,nonatomic)NSString * UrlStr;
 
 @end

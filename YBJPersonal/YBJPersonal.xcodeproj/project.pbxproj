@@ -22,9 +22,9 @@
 		040D902E20C65A64005A7098 /* FourVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D902D20C65A64005A7098 /* FourVC.m */; };
 		040D903120C68F57005A7098 /* Tabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D903020C68F57005A7098 /* Tabbar.m */; };
 		040D903420C6A908005A7098 /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D903320C6A908005A7098 /* TabView.m */; };
-		040D903720C6A94D005A7098 /* TabBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D903620C6A94D005A7098 /* TabBtn.m */; };
 		040D903B20C77326005A7098 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D903A20C77326005A7098 /* UIImage+Category.m */; };
 		040D903F20C77B9A005A7098 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D903E20C77B9A005A7098 /* UIButton+Category.m */; };
+		040D904C20CCEAB5005A7098 /* TabModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D904B20CCEAB5005A7098 /* TabModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +67,13 @@
 		040D903020C68F57005A7098 /* Tabbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tabbar.m; sourceTree = "<group>"; };
 		040D903220C6A907005A7098 /* TabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
 		040D903320C6A908005A7098 /* TabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
-		040D903520C6A94D005A7098 /* TabBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBtn.h; sourceTree = "<group>"; };
-		040D903620C6A94D005A7098 /* TabBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBtn.m; sourceTree = "<group>"; };
 		040D903920C77326005A7098 /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		040D903A20C77326005A7098 /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		040D903C20C7742A005A7098 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		040D903D20C77B9A005A7098 /* UIButton+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
 		040D903E20C77B9A005A7098 /* UIButton+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
+		040D904A20CCEAB5005A7098 /* TabModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabModel.h; sourceTree = "<group>"; };
+		040D904B20CCEAB5005A7098 /* TabModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +150,8 @@
 				040D903020C68F57005A7098 /* Tabbar.m */,
 				040D903220C6A907005A7098 /* TabView.h */,
 				040D903320C6A908005A7098 /* TabView.m */,
-				040D903520C6A94D005A7098 /* TabBtn.h */,
-				040D903620C6A94D005A7098 /* TabBtn.m */,
+				040D904A20CCEAB5005A7098 /* TabModel.h */,
+				040D904B20CCEAB5005A7098 /* TabModel.m */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -328,7 +328,6 @@
 			files = (
 				040D903420C6A908005A7098 /* TabView.m in Sources */,
 				040D8FF720C65755005A7098 /* ViewController.m in Sources */,
-				040D903720C6A94D005A7098 /* TabBtn.m in Sources */,
 				040D902520C65A34005A7098 /* FirstVC.m in Sources */,
 				040D900220C65755005A7098 /* main.m in Sources */,
 				040D902E20C65A64005A7098 /* FourVC.m in Sources */,
@@ -340,6 +339,7 @@
 				040D903F20C77B9A005A7098 /* UIButton+Category.m in Sources */,
 				040D901920C65905005A7098 /* RootTabbar.m in Sources */,
 				040D903B20C77326005A7098 /* UIImage+Category.m in Sources */,
+				040D904C20CCEAB5005A7098 /* TabModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +490,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREFIX_HEADER = /Users/mac/Desktop/YBJPersonal/YBJPersonal/PrefixHeader.pch;
+				DEVELOPMENT_TEAM = 3U9Z8362WK;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YBJPersonal/PrefixHeader.pch";
 				INFOPLIST_FILE = YBJPersonal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rogue.YBJPersonal;
@@ -504,7 +505,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				GCC_PREFIX_HEADER = /Users/mac/Desktop/YBJPersonal/YBJPersonal/PrefixHeader.pch;
+				DEVELOPMENT_TEAM = 3U9Z8362WK;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YBJPersonal/PrefixHeader.pch";
 				INFOPLIST_FILE = YBJPersonal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Rogue.YBJPersonal;
