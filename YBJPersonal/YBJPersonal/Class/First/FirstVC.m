@@ -8,6 +8,7 @@
 
 #import "FirstVC.h"
 #import "FourVC.h"
+#import "DomeOneVC.h"
 @interface FirstVC ()
 
 @end
@@ -22,11 +23,23 @@
     [self.view addSubview:imageView];
     self.title = @"github";
     [self setLeftBtn:[UIImage resizeImage:[UIImage imageNamed:@"github"] withNewSize:CGSizeMake(30, 30)]];
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.frame = CGRectMake(100, 100, 100, 30);
+    button.backgroundColor = [UIColor redColor];
+    [button setTitle:@"跳转" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(tiaozhuan) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
     
 }
 -(void)LeftBtnAcrion{
     FourVC * VC = [[FourVC alloc]init];
     VC.UrlStr = @"https://github.com/RogueYBJ";
+    [self.navigationController pushViewController:VC animated:YES];
+}
+//跳转
+-(void)tiaozhuan{
+    DomeOneVC * VC = [[DomeOneVC alloc]init];
+//    VC.UrlStr = @"https://github.com/RogueYBJ";
     [self.navigationController pushViewController:VC animated:YES];
 }
 - (void)didReceiveMemoryWarning {

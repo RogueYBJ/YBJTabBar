@@ -32,6 +32,7 @@
     root.viewControllers = [self ViewControllersArr];
     
     TabModel * model = [TabModel shareTabModel];
+    //tab的风格
     model.Style = YBJTabBarItemStyleFirst;
 //    model.inderx = 0;
     model.IconArr = @[[UIImage imageNamed:@"第一"],[UIImage imageNamed:@"第二"],[UIImage imageNamed:@"第三"]];

@@ -25,6 +25,12 @@
 		040D903B20C77326005A7098 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D903A20C77326005A7098 /* UIImage+Category.m */; };
 		040D903F20C77B9A005A7098 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D903E20C77B9A005A7098 /* UIButton+Category.m */; };
 		040D904C20CCEAB5005A7098 /* TabModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D904B20CCEAB5005A7098 /* TabModel.m */; };
+		0420372220D0BC7800863983 /* domeOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0420372120D0BC7800863983 /* domeOne.jpg */; };
+		0474D9F620CF577100B49811 /* DomeOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474D9F520CF577100B49811 /* DomeOneVC.m */; };
+		0474D9F920CF5CD900B49811 /* CustomFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474D9F820CF5CD900B49811 /* CustomFooterView.m */; };
+		0474D9FC20CF5FC200B49811 /* OneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474D9FB20CF5FC200B49811 /* OneModel.m */; };
+		0474D9FF20CF7C6100B49811 /* RightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474D9FE20CF7C6100B49811 /* RightView.m */; };
+		0474DA0220CF8E9600B49811 /* DomeOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0474DA0120CF8E9600B49811 /* DomeOneCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,17 @@
 		040D903E20C77B9A005A7098 /* UIButton+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
 		040D904A20CCEAB5005A7098 /* TabModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabModel.h; sourceTree = "<group>"; };
 		040D904B20CCEAB5005A7098 /* TabModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabModel.m; sourceTree = "<group>"; };
+		0420372120D0BC7800863983 /* domeOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = domeOne.jpg; sourceTree = "<group>"; };
+		0474D9F420CF577100B49811 /* DomeOneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DomeOneVC.h; sourceTree = "<group>"; };
+		0474D9F520CF577100B49811 /* DomeOneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DomeOneVC.m; sourceTree = "<group>"; };
+		0474D9F720CF5CD900B49811 /* CustomFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomFooterView.h; sourceTree = "<group>"; };
+		0474D9F820CF5CD900B49811 /* CustomFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomFooterView.m; sourceTree = "<group>"; };
+		0474D9FA20CF5FC200B49811 /* OneModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneModel.h; sourceTree = "<group>"; };
+		0474D9FB20CF5FC200B49811 /* OneModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneModel.m; sourceTree = "<group>"; };
+		0474D9FD20CF7C6100B49811 /* RightView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RightView.h; sourceTree = "<group>"; };
+		0474D9FE20CF7C6100B49811 /* RightView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RightView.m; sourceTree = "<group>"; };
+		0474DA0020CF8E9600B49811 /* DomeOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DomeOneCell.h; sourceTree = "<group>"; };
+		0474DA0120CF8E9600B49811 /* DomeOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DomeOneCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +137,7 @@
 				040D8FF520C65755005A7098 /* ViewController.h */,
 				040D8FF620C65755005A7098 /* ViewController.m */,
 				040D903C20C7742A005A7098 /* PrefixHeader.pch */,
+				0474D9F220CF571F00B49811 /* Dome */,
 				040D903820C6D949005A7098 /* Category */,
 				040D901A20C659D7005A7098 /* Class */,
 				040D901620C658BE005A7098 /* Tabbar */,
@@ -224,6 +242,32 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		0474D9F220CF571F00B49811 /* Dome */ = {
+			isa = PBXGroup;
+			children = (
+				0474D9F320CF573000B49811 /* DomeOne */,
+			);
+			path = Dome;
+			sourceTree = "<group>";
+		};
+		0474D9F320CF573000B49811 /* DomeOne */ = {
+			isa = PBXGroup;
+			children = (
+				0420372120D0BC7800863983 /* domeOne.jpg */,
+				0474D9F420CF577100B49811 /* DomeOneVC.h */,
+				0474D9F520CF577100B49811 /* DomeOneVC.m */,
+				0474DA0020CF8E9600B49811 /* DomeOneCell.h */,
+				0474DA0120CF8E9600B49811 /* DomeOneCell.m */,
+				0474D9F720CF5CD900B49811 /* CustomFooterView.h */,
+				0474D9F820CF5CD900B49811 /* CustomFooterView.m */,
+				0474D9FD20CF7C6100B49811 /* RightView.h */,
+				0474D9FE20CF7C6100B49811 /* RightView.m */,
+				0474D9FA20CF5FC200B49811 /* OneModel.h */,
+				0474D9FB20CF5FC200B49811 /* OneModel.m */,
+			);
+			path = DomeOne;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				040D8FFF20C65755005A7098 /* LaunchScreen.storyboard in Resources */,
+				0420372220D0BC7800863983 /* domeOne.jpg in Resources */,
 				040D8FFC20C65755005A7098 /* Assets.xcassets in Resources */,
 				040D8FFA20C65755005A7098 /* Main.storyboard in Resources */,
 			);
@@ -328,16 +373,21 @@
 			files = (
 				040D903420C6A908005A7098 /* TabView.m in Sources */,
 				040D8FF720C65755005A7098 /* ViewController.m in Sources */,
+				0474D9F920CF5CD900B49811 /* CustomFooterView.m in Sources */,
 				040D902520C65A34005A7098 /* FirstVC.m in Sources */,
 				040D900220C65755005A7098 /* main.m in Sources */,
 				040D902E20C65A64005A7098 /* FourVC.m in Sources */,
 				040D8FF420C65755005A7098 /* AppDelegate.m in Sources */,
 				040D903120C68F57005A7098 /* Tabbar.m in Sources */,
 				040D902820C65A4C005A7098 /* SecondVC.m in Sources */,
+				0474D9FF20CF7C6100B49811 /* RightView.m in Sources */,
+				0474DA0220CF8E9600B49811 /* DomeOneCell.m in Sources */,
 				040D902B20C65A58005A7098 /* ThreeVC.m in Sources */,
 				040D902220C65A23005A7098 /* HomeVC.m in Sources */,
 				040D903F20C77B9A005A7098 /* UIButton+Category.m in Sources */,
 				040D901920C65905005A7098 /* RootTabbar.m in Sources */,
+				0474D9F620CF577100B49811 /* DomeOneVC.m in Sources */,
+				0474D9FC20CF5FC200B49811 /* OneModel.m in Sources */,
 				040D903B20C77326005A7098 /* UIImage+Category.m in Sources */,
 				040D904C20CCEAB5005A7098 /* TabModel.m in Sources */,
 			);

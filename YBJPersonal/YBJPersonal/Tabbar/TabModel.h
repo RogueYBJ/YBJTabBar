@@ -38,4 +38,5 @@ typedef NS_ENUM(NSInteger, YBJTabBarItemStyle) {
 @property(strong ,nonatomic)UIColor * btnTitleHetColor;
 
 + (TabModel *)shareTabModel;
+
 @end
